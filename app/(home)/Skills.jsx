@@ -11,6 +11,7 @@ const Skills = () => {
     const [endorsementMessageInput, setEndorsementMessageInput] = useState({});
 
     const api = apiPath + '/skills'
+    console.log(api)
 
     const getDuration = (startDate) => {
         const start = new Date(startDate);

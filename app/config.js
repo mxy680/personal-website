@@ -1,1 +1,1 @@
-export const apiPath = 'https://personal-website-8m5xkyls9-mark-shteyns-projects.vercel.app/api'
+export const apiPath = 'http://localhost:3000/api'
