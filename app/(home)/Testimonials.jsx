@@ -6,6 +6,7 @@ import './Testimonials.css';
 export default function Testimonials () {
 
   const api = `${process.env.NEXT_PUBLIC_URL}/api/testimonials`
+  console.log(api)
 
   const [testimonials, setTestimonials] = useState([])
   const [testimonialFormData, setTestimonialFormData] = useState({
