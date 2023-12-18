@@ -1,0 +1,96 @@
+.arrow-icon {
+    width: 32px; /* Adjust the width as needed */
+    height: 32px; /* Adjust the height as needed */
+    vertical-align: middle; /* Aligns the icon with the middle of the table rows */
+    margin: 250px 10px; /* Adds some space around the icon */
+    filter: brightness(50%); /* Make the icon lighter */
+}
+
+.ml-model-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* This will ensure a max of 3 columns */
+    gap: 20px; /* Adds space between the boxes */
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 15px;
+}
+
+.ml-model {
+    border: 1px solid #d1d1d1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.ml-model h4 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.ml-model p {
+    font-size: .8em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.ml-model:hover {
+    background-color: #f9f9f9;
+    border-color: #bbb;
+}
+
+.ml-model:focus {
+    background-color: lightblue;
+}
+
+/* Styles for the model reports container */
+.ml-model-report-container {
+    margin-top: 30px; /* Adds some spacing between the models and their reports */
+}
+
+.ml-model-report {
+    max-width: 1000px; 
+    margin: 80px auto; /* Vertical margin added for spacing between reports */
+    padding: 20px 25px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.7;
+}
+
+.ml-model-report h3 {
+    font-weight: 600;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #2a4365; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+    text-align: left; /* Left align the titles, adjust as per your preference */
+}
+
+.ml-model-report h4 {
+    font-weight: 600;
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    color: #2a4365; 
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+    text-align: left; /* Left align the titles, adjust as per your preference */
+}
+
+.ml-model-report p {
+    margin-bottom: 15px; /* Added margin for spacing between paragraphs */
+    font-size: 0.8em;
+}
+
+.blog-image-display {
+    display: flex;
+    justify-content: space-between; /* Spread the images evenly within the container */
+    align-items: center;             /* Center the images vertically */
+    padding: 20px;
+    margin: 20px 0;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}

@@ -1,0 +1,57 @@
+/* Navbar */
+.navbar-container {
+    background-color: #2b8dca;  /* Blue background to match your footer */
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);  /* Subtle shadow for depth */
+  }
+  
+  .navbar-links {
+    display: flex;
+    justify-content: space-around;  /* Distribute links evenly */
+    max-width: 1200px;
+    margin: 0 auto;  /* Centering if the screen is wider than max-width */
+  }
+  
+  .navbar-links a {
+    color: #ffffff;  /* White text for contrast against blue background */
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;  /* Smooth transition for hover effect */
+    position: relative;  /* Position context for underline hover effect */
+    padding-bottom: 5px;  /* Padding for the underline effect */
+  }
+  
+  .navbar-links a:hover {
+    color: #f7f7f7;  /* Slightly lighter color on hover */
+  }
+  
+  .navbar-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #f7f7f7;  /* Light underline */
+    transition: width 0.3s ease;
+  }
+  
+  .navbar-links a:hover::after {
+    width: 100%;  /* Full underline width on hover */
+  }
+  
+  /* For active link, if you wish to use NavLink */
+  .navbar-links .active {
+    font-weight: bold;
+  }
+  
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .navbar-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar-links a {
+        margin: 10px 0;
+    }
+  }  

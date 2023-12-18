@@ -1,0 +1,58 @@
+/* Footer.css */
+
+.footer-container {
+    background-color: #f7f7f7; /* Light gray background */
+    padding: 20px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* Limiting width for large screens */
+    margin: 0 auto;
+    padding: 0 20px; /* Horizontal padding */
+}
+
+.footer-contact, .footer-social, .footer-legal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Horizontal alignment for social icons */
+.footer-social {
+    flex-direction: row;
+    gap: 20px; /* Adds spacing between icons */
+}
+
+.footer-contact p, .footer-legal p {
+    margin: 0;
+    margin-bottom: 10px;
+    color: #333; /* Dark gray text */
+}
+
+.footer-social a {
+    margin: 0 10px;
+    color: #333; /* Dark gray icon */
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #0077b5; /* Slightly blue on hover, considering LinkedIn's primary color */
+}
+
+.invert-color {
+    filter: invert(1);
+}
+
+/* Responsive - Stack the sections in smaller screens */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-contact, .footer-social, .footer-legal {
+        margin-bottom: 20px;
+    }
+}

@@ -1,27 +1,477 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+/* Base styles for the blog container */
+.blog-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 50px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  background-color: #fff;
+  box-shadow: 4px 4px 32px rgba(0,0,0,0.2);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* Styles for the blog title */
+.blog-title {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.8em;
+  margin-bottom: 70px;
+  color: #2a4365; 
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+  text-align: center;
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.blog-section {
+  margin-bottom: 2em; /* Adds bottom margin to each section for spacing */
+}
+
+.blog-section h2 {
+  font-family: 'Arial', sans-serif;
+  color: #222222;
+  font-size: 1.8em; /* Slightly larger than normal text for visibility */
+  margin-top: 0;
+  margin-bottom: 0.75em; /* Space below the heading */
+  border-bottom: 2px solid #eaeaea; /* Adds a subtle line to emphasize the section */
+  padding-bottom: 0.25em; /* Adds space between the text and the underline */
+}
+
+.blog-section h3 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  font-size: 1.5em; 
+  margin-bottom: 1.1em;
+  margin-top: 1.2em;
+}
+
+.blog-section h4 {
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  font-size: 1.3em;
+  margin-bottom: 1.1em;
+  margin-top: 1.2em;
+}
+
+.blog-section p {
+  font-family: 'Georgia', serif;
+  font-size: 1em;
+  color: #333333;
+  line-height: 1.6; /* Increases readability with more space between lines */
+  margin-top: 0;
+  margin-bottom: 1em; /* Adds spacing between paragraphs */
+}
+
+.blog-section a {
+  color: #0066cc; /* Gives links a distinct color */
+  text-decoration: none; /* Removes the underline from links */
+}
+
+.blog-section a:hover {
+  text-decoration: underline; /* Adds an underline on hover for better user interaction */
+}
+
+.section-header {
+  color: #1a1a1a; /* A deep, rich color for prominence */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* A modern, clean font for a professional look */
+  font-size: 28px; /* A larger font size for clear hierarchy and visibility */
+  margin-top: 40px; /* Ample space above the heading for clear section demarcation */
+  margin-bottom: 20px; /* Enough space below the heading to separate from the content */
+  padding-bottom: 15px; /* Additional padding for visual comfort */
+  border-bottom: 4px solid #e0e0e0; /* A solid bottom border for a subtle, yet distinct separation */
+  line-height: 1.2; /* Line height for optimal readability and appearance */
+  font-weight: 600; /* A semi-bold weight for clear emphasis, yet not as heavy as bold */
+  text-transform: uppercase; /* Uppercase transformation for a stylistic touch */
+  letter-spacing: 1px; /* Slight letter spacing to enhance the uppercase styling */
+}
+
+.blog-sub-section {
+  margin-bottom: 20px; /* Space below each sub-section */
+  padding-left: 20px; /* Indent sub-sections for better hierarchy */
+}
+
+.blog-sub-section h4 {
+  color: #333; /* Dark color for the heading */
+  font-family: 'Arial', sans-serif; /* Font family for the heading */
+  font-size: 20px; /* Font size for the heading */
+  margin-top: 20px; /* Top margin for spacing */
+  margin-bottom: 10px; /* Bottom margin for spacing */
+  padding-bottom: 5px; /* Bottom padding for a bit of extra space under the text */
+  border-bottom: 2px solid #eaeaea; /* A light bottom border for visual separation */
+  line-height: 1.4; /* Line height for better readability */
+  font-weight: normal; /* Normal font weight to differentiate from main titles */
+}
+
+.sub-section-header {
+  color: #2a2a2a; /* A slightly darker shade for prominence */
+  font-family: 'Georgia', serif; /* A classic font for a more elegant look */
+  font-size: 24px; /* Slightly larger font size for clear hierarchy */
+  margin-top: 30px; /* Ample space above the heading for clear section separation */
+  margin-bottom: 15px; /* Space below the heading before the content starts */
+  padding-bottom: 10px; /* Additional padding for visual comfort */
+  border-bottom: 3px solid #d3d3d3; /* A thicker bottom border for a pronounced separation */
+  line-height: 1.3; /* Optimal line height for readability */
+  font-weight: bold; /* Bold font weight for emphasis */
+  text-align: left; /* Align text to the left for a clean and structured look */
+}  
+
+code {
+  display: block; /* Makes the code element block-level for better control */
+  background-color: #f5f5f5; /* Light gray background for a subtle contrast */
+  color: #333; /* Dark gray color for the text for readability */
+  border-left: 4px solid #3498db; /* A bright left border for a touch of color */
+  padding: 16px; /* Adds space inside the borders */
+  margin: 8px 0; /* Adds space outside, separating the code from other content */
+  overflow-x: auto; /* Allows horizontal scrolling if the code is too long */
+  font-family: 'Consolas', 'Monaco', 'Andale Mono', 'Ubuntu Mono', monospace; /* Monospace font for better code readability */
+  font-size: 0.9em; /* Slightly smaller font size */
+  line-height: 1.6; /* Space out lines of code a bit */
+  border-radius: 4px; /* Rounded corners for a modern look */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* A subtle box shadow for a soft depth effect */
+  white-space: pre-wrap; /* Maintains spacing and line breaks as they are in the code */
+}
+
+/* Optional: Add a style for inline code if necessary */
+code.inline {
+  display: inline; /* Keeps inline code inline */
+  padding: 2px 4px; /* Less padding for inline elements */
+  border-radius: 4px; /* Rounded corners for a pill-like shape */
+  background-color: #e7e9eb; /* Slightly different background for inline code */
+  border: none; /* No border for inline code */
+  box-shadow: none; /* No shadow for inline code */
+}
+
+output {
+    display: block; /* Block-level for better control */
+    background: #ffffff; /* Bright white background */
+    color: #000000; /* Darker color for better readability */
+    border: 1px solid #EAECEE; /* Light border for subtle definition */
+    padding: 16px 20px; /* Generous padding for a spacious feel */
+    margin: 10px 0; /* Margin to separate the output from surrounding content */
+    margin-bottom: 30px; /* Bottom margin for consistency */
+    font-family: 'Courier New', Courier, monospace; /* Monospace font for that classic code look */
+    font-size: 1em; /* Regular font size for legibility */
+    line-height: 1.5; /* Line height for readability */
+    border-radius: 6px; /* Softly rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Light shadow for a floating effect */
+    white-space: pre-wrap; /* Respects whitespace and line breaks */
+    position: relative; /* For pseudo-element positioning */
+    overflow: hidden; /* Hides the shadow overflow */
+}
+
+/* Adding a pseudo-element for some extra flair */
+output::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #3498db, #9b59b6); /* Gradient border top */
+    border-radius: 6px 6px 0 0; /* Rounded corners on the top side */
+}
+
+/* Optional: Style for inline output */
+output.inline {
+    display: inline-block; /* Inline-block for inline elements that need block features */
+    padding: 4px 8px; /* Smaller padding for inline output */
+    border-radius: 4px; /* Rounded corners for a pill-like appearance */
+    background-color: #e7e9eb; /* Slightly different background for inline output */
+    border: none; /* No border for inline output */
+    box-shadow: none; /* No shadow for inline output */
+}
+
+.table-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.table-style {
+  font-size: 9pt;
+  font-family: Arial;
+  border-collapse: collapse;
+  border: 1px solid silver;
+  width: 45%; 
+  margin: 30px 0; 
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.table-style td, th {
+  padding: 5px;
+  text-align: center;
+}
+
+.table-style th {
+  background-color: #4a6987;
+  color: white;
+}
+
+.table-style tr:nth-child(even) {
+  background: #E0E0E0;
+}
+
+.table-style tr:hover {
+  background: #BDC3C7;
+  cursor: pointer;
+}
+
+.table-left {
+  margin-right: 5%; 
+}
+
+.table-right {
+  margin-left: 5%; 
+}
+
+.table-center-left {
+  margin-right: 2.5%; 
+  margin-left: auto; 
+}
+
+.table-center-right {
+  margin-left: 2.5%; 
+  margin-right: auto; 
+}
+
+.table-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.table-thin {
+  width: 200px;
+}
+
+.table-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* center items vertically in the column */
+  width: 50%; /* fills half the container, adjust as needed */
+}
+
+.table-wrapper .table-title {
+  font-size: 16pt;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.image-grid img {
+  width: 100%;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.center-text {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.table-of-contents {
+  margin: 20px 0;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for the table of contents */
+  border-left: 4px solid #0078d4; /* Blue accent on the left */
+}
+
+.table-of-contents ol {
+  list-style-type: none; /* Removes default list styling */
+  padding-left: 0; /* Removes padding */
+}
+
+.table-of-contents li {
+  padding: 5px 0; /* Adds padding to each list item */
+}
+
+.table-of-contents a {
+  color: #0078d4; /* Theme color for links */
+  text-decoration: none; /* No underline for cleaner look */
+  font-weight: 600; /* Makes the text slightly bolder */
+}
+
+.table-of-contents a:hover {
+  text-decoration: underline; /* Underline on hover for interaction feedback */
+}
+
+.table-of-contents ul {
+  list-style-type: none; /* Removes default list styling */
+  padding-left: 20px; /* Indent for nested lists */
+}
+
+.table-of-contents ul li {
+  font-size: 0.9em; /* Slightly smaller font size for sub-items */
+}
+
+.code-output-image-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  gap: 20px; /* gap between the code and the image */
+  margin-bottom: 20px;
+}
+
+.code-output-image-container code {
+  flex: 1; /* take up half the space */
+}
+
+.code-output-image-container img {
+  flex: 1; /* take up half the space */
+  max-width: 50%;
+  border: 1px solid #d1d1d1;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.image-container {
+  position: relative;
+  width: 900px; /* Adjust the width as per your image size */
+  display: inline-block; /* Use block to center the img with margin auto */
+  text-align: center; /* Centers the img element when its display is inline, like default for img */
+  padding: 20px; /* Space around the img inside the container */
+  border: 1px solid #e0e0e0; /* Border around the container */
+  margin-top: 20px; /* Space above the container */
+  margin-bottom: 20px; /* Space below the container */
+  background-color: #fafafa; /* Background color of the container */
+}
+
+.image-container img {
+  width: 100%;
+  min-width: 100%;    
+  height: auto; /* Keeps the image aspect ratio */
+  border: 1px solid #d1d1d1; /* Border around the image */
+  border-radius: 5px; /* Rounded corners of the image */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Shadow effect for the image */
+  margin: 0 auto; /* Centers the image in the block container */
+}
+
+.image-container .image-code-snippet {
+  visibility: hidden;
+  opacity: 0; /* Start with the tooltip invisible */
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+  color: #333;
+  text-align: left;
+  border-radius: 5px;
+  padding: 10px;
+  /* Position the tooltip on top of the image */
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  transition: visibility 0s, opacity 0.5s linear; /* Smooth transition for the tooltip disappearance */
+}
+
+.image-container .image-code-snippet::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #f9f9f9 transparent transparent transparent;
+}
+
+.image-container:hover .image-code-snippet {
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 1s linear; /* Smooth transition for the tooltip appearance */
+}
+
+.blog-single-image-container {
+  display: block; /* Stack children elements vertically */
+  margin: 40px auto; /* Add margin on the top and bottom for spacing, auto for center alignment */
+  padding: 20px; /* Add padding inside the container */
+  background-color: #ffffff; /* A white background for a clean look */
+  border: 1px solid #eaeaea; /* A light border for subtle definition */
+  border-radius: 10px; /* Rounded corners for a modern feel */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* A soft shadow for depth */
+  max-width: 90%; /* Optimal reading width and to maintain layout consistency */
+  overflow: hidden; /* Ensures that child elements do not overflow the container's boundaries */
+}
+
+.blog-single-image-container img {
+  width: 100%; /* Image takes the full width of the container */
+  height: auto; /* Maintain the image's aspect ratio */
+  border-bottom: 1px solid #eaeaea; /* A light border below the image to separate from text */
+  margin-bottom: 20px; /* Space between the image and the description */
+}
+
+.blog-single-image-container p {
+  color: #333; /* A darker color for better readability */
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Modern, sans-serif font for readability */
+  font-size: 18px; /* Slightly larger font size for ease of reading */
+  line-height: 1.8; /* Increase line-height for better readability */
+  text-align: left; /* Align text to the left for a clean look */
+  margin: 0; /* Remove default margins */
+}
+
+.blog-double-image-container {
+  display: flex; /* Align children elements horizontally */
+  justify-content: space-between; /* Space out the images evenly */
+  margin: 40px auto; /* Add margin on the top and bottom for spacing, auto for center alignment */
+  padding: 20px; /* Add padding inside the container */
+  background-color: #ffffff; /* A white background for a clean look */
+  border: 1px solid #eaeaea; /* A light border for subtle definition */
+  border-radius: 10px; /* Rounded corners for a modern feel */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* A soft shadow for depth */
+  max-width: 100%; /* Optimal reading width and to maintain layout consistency */
+  overflow: hidden; /* Ensures that child elements do not overflow the container's boundaries */
+}
+
+.blog-double-image-container img {
+  width: calc(50% - 10px); /* Set width to be half of the container, adjusting for any margins */
+  height: auto; /* Maintain the image's aspect ratio */
+  border-bottom: 1px solid #eaeaea; /* A light border below the image to separate from text */
+  margin-bottom: 20px; /* Space between the image and the description */
+}
+
+
+.blog-triple-image-container {
+  display: flex; /* Align children elements horizontally */
+  justify-content: space-around; /* Evenly space out the images */
+  margin: 40px auto; /* Same margin as single image container for consistency */
+  padding: 20px; /* Same padding as single image container */
+  background-color: #ffffff; /* Same background color */
+  border: 1px solid #eaeaea; /* Same border style */
+  border-radius: 10px; /* Same border-radius for rounded corners */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Same box-shadow for depth */
+  max-width: 100%; /* Same max-width for layout consistency */
+  overflow: hidden; /* Same overflow rule */
+}
+
+.blog-triple-image-container img {
+  width: calc(33% - 10px); /* Set width to be a third of the container, adjusting for any margins */
+  height: auto; /* Maintain the image's aspect ratio */
+  border-bottom: 1px solid #eaeaea; /* Same border style as single image container */
+  margin-bottom: 20px; /* Same margin-bottom for spacing */
+}
+
+.katex {
+  display: inline-block; /* This ensures that padding is applied correctly */
+  font-size: 1.2em; /* You can adjust the font size as well */
+}
+
+.formula-container {
+  margin: 20px 0;
+}
+
+.home-container {
+  max-width: 1200px;
 }

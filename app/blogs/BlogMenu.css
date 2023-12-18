@@ -1,0 +1,98 @@
+.blog-menu-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 40px auto;
+    padding: 20px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.blog-menu-container h2 {
+    font-size: 36px;
+    margin-bottom: 100px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.blog-menu-container h2::after {
+    content: '';
+    display: block;
+    width: 500px;
+    height: 4px;
+    background: linear-gradient(45deg, #6478d3, #8ba4f9);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+}
+
+.blog-menu-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 25px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.blog-menu-post {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    width: calc(33.333% - 20px);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f8f8f8;
+}
+
+.blog-menu-post:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+}
+
+.blog-menu-post img.blog-cover-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.blog-menu-post img.blog-cover-image:hover {
+    transform: scale(1.05);
+}
+
+.blog-home-post-details {
+    padding: 20px;
+    background-color: #ffffff;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.blog-home-post-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: #333;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.blog-home-post-date,
+.blog-home-post-category {
+    display: block;
+    font-size: 15px;
+    margin-top: 5px;
+    color: #666;
+}
+
+.blog-home-post-category {
+    font-weight: bold;
+    color: #6478d3;
+}

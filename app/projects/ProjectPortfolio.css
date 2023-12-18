@@ -1,0 +1,103 @@
+.portfolio-container {
+    padding: 60px 5%; /* Reduced padding */
+    background-color: #ffffff;
+    text-align: center;
+    border-radius: 12px; /* Slightly larger rounded corners */
+    margin: 30px auto; /* Reduced margin */
+    max-width: 1200px; /* Smaller maximum width for a more compact look */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Slightly softer shadow */
+}
+
+.portfolio-title {
+    font-size: 36px;
+    margin-bottom: 100px;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    position: relative;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-title::after {
+    content: '';
+    display: block;
+    width: 1200px;
+    height: 4px;
+    background: linear-gradient(45deg, #6478d3, #8ba4f9);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+}
+
+.portfolio-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 50px; /* More space between items */
+    margin-top: 50px;
+}
+
+.portfolio-item {
+    background-color: #f8f8f8; /* Light grey background */
+    border: none;
+    padding: 20px; /* Increased padding */
+    border-radius: 8px; /* Rounded corners */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden; /* Ensures contents stay within the rounded corners */
+    text-decoration: none;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px); /* Subtle lift effect on hover */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+.portfolio-item h2 {
+    font-size: 1.8rem; /* Larger font size */
+    color: #2c3e50; /* Darker shade for contrast */
+    margin: 15px 0;
+}
+
+.portfolio-item img {
+    width: 100%; /* Full width for better responsiveness */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px; /* Rounded corners for the image */
+    margin-bottom: 15px; /* Space below image */
+}
+
+.portfolio-item-company {
+    font-size: 1.2rem; /* Slightly larger than the description for emphasis */
+    color: #2c3e50; /* Darker color for distinction */
+    margin-top: 10px; /* Space on top of the company name */
+    margin-bottom: 15px; /* Space below the company name */
+    font-weight: 500; /* Semi-bold for prominence */
+}
+
+.portfolio-item-description {
+    font-size: 0.9rem; /* Standard size for readability */
+    color: #3f474d; /* Softer color for ease of reading */
+    margin: 10px 0; /* Spacing above and below the description */
+    text-align: left; /* Aligning the text to the left for a natural flow */
+    line-height: 1.6; /* Line spacing for better readability */
+    text-align: center;
+    font-weight: normal; /* Unbold the text */
+}
+
+
+@media (max-width: 1024px) {
+    .portfolio-items {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust grid for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-item {
+        padding: 15px; /* Reduced padding on smaller screens */
+    }
+
+    .portfolio-item img {
+        margin-bottom: 10px; /* Reduced space on smaller screens */
+    }
+}
