@@ -2,11 +2,10 @@
 
 import React, { useState, useEffect } from 'react';
 import './Testimonials.css';
-import { apiPath } from '../config';
 
 export default function Testimonials () {
 
-  const api = apiPath + '/testimonials';
+  const api = `${window.location.origin}/api/testimonials`
 
   const [testimonials, setTestimonials] = useState([])
   const [testimonialFormData, setTestimonialFormData] = useState({

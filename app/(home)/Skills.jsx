@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect } from 'react';
 import './Skills.css';
-import { apiPath } from '../config';
 
 const Skills = () => {
     const [skillsData, setSkillsData] = useState([]);
@@ -10,8 +9,7 @@ const Skills = () => {
     const [endorsementNameInput, setEndorsementNameInput] = useState({});
     const [endorsementMessageInput, setEndorsementMessageInput] = useState({});
 
-    const api = apiPath + '/skills'
-    console.log(api)
+    const api = `${window.location.origin}/api/skills`
 
     const getDuration = (startDate) => {
         const start = new Date(startDate);
