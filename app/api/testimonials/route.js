@@ -32,7 +32,5 @@ export async function POST(request) {
         .select()
         .single()
 
-    console.log(data, error)
-
     return NextResponse.json({ data, error })
 }
