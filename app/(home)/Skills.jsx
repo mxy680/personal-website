@@ -9,7 +9,7 @@ const Skills = () => {
     const [endorsementNameInput, setEndorsementNameInput] = useState({});
     const [endorsementMessageInput, setEndorsementMessageInput] = useState({});
 
-    const api = `${window.location.origin}/api/skills`
+    const api = `${process.env.NEXT_PUBLIC_API_URL}/skills`
 
     const getDuration = (startDate) => {
         const start = new Date(startDate);
